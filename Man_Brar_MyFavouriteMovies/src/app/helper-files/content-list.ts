@@ -28,7 +28,7 @@ export class ContentList {
         <p>${content.description}</p>
         <p>Creator: ${content.creator}</p>
         ${imgHtml}
-        <p>Type: ${content.type || '-'}</p>
+        <p>Tags: ${content.tags}</p>
       </div>
     `;
   }
