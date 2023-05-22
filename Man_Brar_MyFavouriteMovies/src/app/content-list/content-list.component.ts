@@ -40,7 +40,7 @@ export class ContentListComponent implements OnInit {
       title: 'Chal Mera Putt 2',
       description: 'Chal Mera Putt is a light-hearted comedy about a group of illegal immigrants living in the city of Birmingham.',
       creator: 'Gurcharan Singh',
-      imgURL: 'assets/img/CMP.jpg',
+      imgURL: 'assets/img/jodi.jpg',
      tags: ['Comedy', 'Drama']
 
     },
@@ -49,7 +49,7 @@ export class ContentListComponent implements OnInit {
       title: 'Ardass',
       description: 'The movie revolves around Master Gurmukh (Gurpreet Ghuggi) and how he arrives in a new village as this posting in government school and helping various villagers by reminding them of their good values and teaching them more meanwhile facing his own inner guilt.',
       creator: 'Gippy Grewal',
-      imgURL: 'assets/img/CMP.jpg',
+      imgURL: 'assets/img/Ardass.jpg',
      tags: ['Drama']
 
     },
