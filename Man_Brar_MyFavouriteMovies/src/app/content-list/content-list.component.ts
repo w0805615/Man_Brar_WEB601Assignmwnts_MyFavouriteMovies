@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, Input, OnInit} from '@angular/core';
+import { Content} from '../helper-files/content-interface';
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })
-export class ContentListComponent {
-  contentList = [
+export class ContentListComponent implements OnInit {
+  ngOnInit(){}
+  contentList:Content[] = [
     {
           id: 1,
           title: 'Angrej',
