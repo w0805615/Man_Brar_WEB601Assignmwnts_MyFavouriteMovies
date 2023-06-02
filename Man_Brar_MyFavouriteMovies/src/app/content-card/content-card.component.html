@@ -1,4 +1,5 @@
 <!--<p>content-card works!</p>-->
+<div *ngIf = "content.type === 'Drama'  || content.type === 'Comedy' || content.type === ''">
 <div class="contents">
   
   <h2>{{content.title}}</h2>
@@ -8,4 +9,5 @@
   <p *ngIf="content.type" > {{content.type}}</p>
   <p *ngIf="content.tags && content.tags.length > 0"> {{content.tags}}</p>
 
+</div>
 </div>

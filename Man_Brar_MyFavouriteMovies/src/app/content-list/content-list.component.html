@@ -1,4 +1,18 @@
 
 <h1 style="background-color: rgba(158, 203, 100, 0.755);">Movies</h1>
-<app-content-card *ngFor="let item of contentList.slice(0,5); let first = first" [content]="item" [class.first-item]="first" > 
+<div id="filter">
+<input [(ngModel)]="title"><button (click)="findTitle()">Search Title</button>
+<h2>{{message}}</h2>
+</div>
+<div class="drama">
+<app-content-card *ngFor="let item of (contentList | contentFilter :'Drama');" [content]="item"  [ngClass]="{'highlight' : item.title.toLowerCase() === title.toLowerCase() && searchResult}"> 
 </app-content-card>
+</div>
+<div class="Comedy">
+<app-content-card *ngFor="let item of (contentList | contentFilter :'Comedy');" [content]="item"  [ngClass]="{'highlight' : item.title.toLowerCase() === title.toLowerCase() && searchResult}"> 
+</app-content-card>
+</div>
+<div class="empty">
+<app-content-card *ngFor="let item of (contentList | contentFilter :'');" [content]="item"  [ngClass]="{'highlight' : item.title === title && searchResult}"> 
+</app-content-card>
+</div>

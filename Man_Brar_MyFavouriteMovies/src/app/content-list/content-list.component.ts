@@ -14,7 +14,8 @@ export class ContentListComponent implements OnInit {
           description: 'This is my favorite punjabi movie. Angrej ( Amrinder Gill ), an older adult from India, arrives at his pre-partition home in Pakistan, where he meets the current residents.',
           creator: 'Jaspal Sandhu',
           imgURL: 'assets/img/img1.jpg',
-          tags: ['Comedy']
+          tags: ['Comedy'],
+          type: 'Comedy'
 
     },
     {
@@ -23,7 +24,8 @@ export class ContentListComponent implements OnInit {
       description: 'The story of Love Punjab revolves around a family in which husband and wife fights daily for small reasons and their son is only victim of these fights.',
       creator: 'Sandeep Singh',
       imgURL: 'assets/img/lovepunjab.jpg',
-      tags: ['Comedy', 'Drama']
+      tags: ['Comedy', 'Drama'],
+      type: 'Comedy'
 
     },
     {
@@ -32,8 +34,8 @@ export class ContentListComponent implements OnInit {
       description: 'Chal Mera Putt is a light-hearted comedy about a group of illegal immigrants living in the city of Birmingham.',
       creator: 'Gurcharan Singh',
       imgURL: 'assets/img/CMP.jpg',
-     tags: ['Comedy', 'Drama']
-
+     tags: ['Comedy', 'Drama'],
+     type: 'Comedy'
     },
     {
       id: 4,
@@ -41,8 +43,8 @@ export class ContentListComponent implements OnInit {
       description: 'Chal Mera Putt is a light-hearted comedy about a group of illegal immigrants living in the city of Birmingham.',
       creator: 'Gurcharan Singh',
       imgURL: 'assets/img/jodi.jpg',
-     tags: ['Comedy', 'Drama']
-
+     tags: ['Comedy', 'Drama'],
+     type: 'Drama'
     },
     {
       id: 5,
@@ -50,8 +52,8 @@ export class ContentListComponent implements OnInit {
       description: 'The movie revolves around Master Gurmukh (Gurpreet Ghuggi) and how he arrives in a new village as this posting in government school and helping various villagers by reminding them of their good values and teaching them more meanwhile facing his own inner guilt.',
       creator: 'Gippy Grewal',
       imgURL: 'assets/img/Ardass.jpg',
-     tags: ['Drama']
-
+     tags: ['Drama'],
+     type: 'Drama'
     },
     {
       id: 6,
@@ -59,7 +61,17 @@ export class ContentListComponent implements OnInit {
       description: 'Set in the vibrant and culturally rich backdrop of Punjab in the 1980s, "Jodi" is a musical drama that weaves together the fictional tale of two talented and passionate artists on a journey to redefine the Punjabi folk music scene.',
       creator: 'Amberdeep Singh',
       imgURL: 'assets/img/CMP.jpg',
-     tags: ['Comedy', 'Musical Drama']
+     tags: ['Comedy', 'Musical Drama'],
+     type: 'Drama'
+    },
+    {
+      id: 7,
+      title: 'Jodi2',
+      description: 'Set in the vibrant and culturally rich backdrop of Punjab in the 1980s, "Jodi" is a musical drama that weaves together the fictional tale of two talented and passionate artists on a journey to redefine the Punjabi folk music scene.',
+      creator: 'Amberdeep Singh',
+      imgURL: 'assets/img/CMP.jpg',
+     tags: ['Comedy', 'Musical Drama'],
+     type: ''
     }
   ]
 
@@ -76,6 +88,18 @@ export class ContentListComponent implements OnInit {
       </div>
     `;
   }
+  title : string='';
+  searchResult : boolean = false;
+  message : string = '';
 
+  findTitle(){
+      this.searchResult = this.contentList.some(content => content.title.toLowerCase() === this.title.toLowerCase())
 
+      if (this.searchResult){
+        this.message= "title Exist";
+      }
+      else{
+        this.message =" title does not exist";
+      }
+  }
 }
