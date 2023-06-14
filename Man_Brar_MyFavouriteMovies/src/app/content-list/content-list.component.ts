@@ -23,7 +23,7 @@ export class ContentListComponent implements OnInit {
       title: 'Love Punjab',
       description: 'The story of Love Punjab revolves around a family in which husband and wife fights daily for small reasons and their son is only victim of these fights.',
       creator: 'Sandeep Singh',
-      imgURL: 'assets/img/lovepunjab.jpg',
+      imgURL: '',
       tags: ['Amrinder Gill', 'Punjabi movie'],
       type: 'Comedy'
 
