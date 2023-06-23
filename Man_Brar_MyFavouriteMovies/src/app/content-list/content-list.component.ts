@@ -89,4 +89,11 @@ export class ContentListComponent implements OnInit {
         this.message =" title does not exist";
       }
   }
+
+  receiveNewContent(newContent: any): void {
+    // Add the new content item to the content list
+    console.log("newContent",newContent);
+    this.contentList.push(newContent);
+    console.log('contentListArray',this.contentList);
+  }
 }

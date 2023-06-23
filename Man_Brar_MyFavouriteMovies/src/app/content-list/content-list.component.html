@@ -1,4 +1,4 @@
-
+<app-create-content (contentAdded)="receiveNewContent($event)"></app-create-content>
 <h1 style=" font-size: 4em; text-align: Center;">Movies</h1>
 <div id="filter">
 <input [(ngModel)]="title"><button (click)="findTitle()">Search Title</button>
