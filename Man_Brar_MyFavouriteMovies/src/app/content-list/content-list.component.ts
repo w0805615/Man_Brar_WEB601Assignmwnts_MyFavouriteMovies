@@ -21,7 +21,7 @@ export class ContentListComponent implements OnInit {
   message : string = '';
 
   findTitle(){
-      this.searchResult = this.contentList.some(content => content.title.toLowerCase() === this.title.toLowerCase())
+      this.searchResult = this.contentList.some(content => content.title.toLowerCase() === this.title.toLowerCase());
 
       if (this.searchResult){
         this.message= "title Exist";
@@ -43,6 +43,7 @@ export class ContentListComponent implements OnInit {
     {
       this.contentList = contentList;
     })
+    
     const id = 4;
   this.movieService.getContentById(id).subscribe((singleContent: any)=>
   {
